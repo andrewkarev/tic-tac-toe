@@ -1,3 +1,3 @@
-# tic-tac-toe
+# Tic-Tac-Toe
 
-[tic-tac-toe](https://andrewkarev.github.io/tic-tac-toe)</br>
+[Tic-Tac-Toe](https://andrewkarev.github.io/tic-tac-toe)</br>
