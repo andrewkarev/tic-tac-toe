@@ -15,8 +15,12 @@ const WINNING_COMBINATIONS = [
   [2, 5, 8],
   [0, 4, 8],
   [2, 4, 6],
-]
+];
+const SCORE_X = document.querySelector('.score__element_x');
+const SCORE_CIRCLE = document.querySelector('.score__element_circle');
 let circleTurn;
+let scoreCounterX = 0;
+let scoreCounterCircle = 0;
 
 startGame();
 
@@ -57,9 +61,16 @@ function endgame(draw) {
     winningMessageTextElement.innerText = 'Ничья!'
   } else {
     winningMessageTextElement.innerText = `Победу одержал игрок '${circleTurn ? 'O' : 'X'}'!`;
+    scoreUpdate();
   }
 
   winningMessageElement.classList.add('show');
+}
+
+function scoreUpdate() {
+  circleTurn ? scoreCounterCircle++ : scoreCounterX++;
+  SCORE_X.innerText = scoreCounterX;
+  SCORE_CIRCLE.innerText = scoreCounterCircle;
 }
 
 function isDraw() {
@@ -94,3 +105,7 @@ function checkWin(currentClass) {
     })
   })
 }
+
+
+console.log(SCORE_X)
+console.log(SCORE_CIRCLE)

@@ -145,3 +145,70 @@
 .winning-message.show {
   display: flex;
 }
+
+.score {
+  position: fixed;
+  top: calc(50% - var(--cell-size));
+  left: calc(50% + 2 * var(--cell-size));
+}
+
+.score__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.score__x-emblem,
+.score__circle-emblem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--cell-size);
+  height: var(--cell-size);
+}
+
+.score__x,
+.score__circle {
+  font-family: "Arial Black", "Gadget", sans-serif;
+  font-size: 5.7rem;
+}
+
+.score__element {
+  position: relative;
+  top: 0.5rem;
+}
+
+.score__x-emblem::before,
+.score__x-emblem::after {
+  content: "";
+  position: absolute;
+  width: calc((var(--mark-size) * 0.15) * 0.8);
+  height: calc((var(--mark-size)) * 0.8);
+  background-color: #000000;
+}
+
+.score__x-emblem::before {
+  transform: rotate(45deg);
+}
+
+.score__x-emblem::after {
+  transform: rotate(-45deg);
+}
+
+.score__circle-emblem::before,
+.score__circle-emblem::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.score__circle-emblem::before {
+  width: calc(var(--mark-size) * 0.8);
+  height: calc(var(--mark-size) * 0.8);
+  background-color: #000000;
+}
+
+.score__circle-emblem::after {
+  width: calc(var(--mark-size) * 0.56);
+  height: calc(var(--mark-size) * 0.56);
+  background-color: #ffffff;
+}
